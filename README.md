@@ -6,10 +6,11 @@
 3. [Issue Remediation](#issue-remediation)
 4. [Test Results](#test-results)
 5. [Monitoring and Log Information](#monitoring-and-log-information)
+6. [Diagram](#diagram)
 
 ---
 
-## 1. Introduction
+## Introduction
 
 The URL Shortener is a popular application that has recently seen increased demand. To ensure its reliability and performance, we conducted a blitz test to simulate the load of 14,000 users accessing the application simultaneously. This documentation outlines the activities of the Quality Assurance (QA) team, the steps taken to remediate any issues that arose, and the test results before and after the blitz.
 
@@ -34,7 +35,7 @@ The URL Shortener is a popular application that has recently seen increased dema
 <p>I changed the value of worker_processes from "Auto" to "8".</p>
 <p>Uncomment all the lines with gzip</p>
 
-## 2. QA Activities<a name="qa-activities"></a>
+##  QA Activities
 
 ### Summary of QA Activities
 
@@ -42,7 +43,7 @@ The URL Shortener is a popular application that has recently seen increased dema
 - The goal was to assess the application's performance and scalability and thus any issues that may arise.
 - The QA engineer monitored the error rates.
 
-## 3. Issue Remediation
+## Issue Remediation
 
 <p><em>What was the issue?</em></p>
 
@@ -55,12 +56,10 @@ The issue was that the URL Shortener was not able to handle an influx of 14,000 
    load at once. At this point, it was clear that I first needed to upgrade to a larger more robust instance.
 
 
-6. **Scaling Resources**: We scaled up the server resources, including CPU and memory by using a t2.2xlarge EC2 Instance which has 8vCPUs, and 32 GiB of memory.
+2. **Scaling Resources**: We scaled up the server resources, including CPU and memory by using a t2.2xlarge EC2 Instance which has 8vCPUs, and 32 GiB of memory.
 
 
-8. **Testing and Retesting**: After implementing these changes, we thoroughly tested the application again to ensure that the issues were resolved.
-
-## 4. Test Results
+3.  **Testing and Retesting**: After implementing these changes, we thoroughly tested the application again to ensure that the issues were resolved.
 
 ### Test Results
 
@@ -73,9 +72,11 @@ Test- Results after redeploying:
 
 I redeployed the application which is now running on a t2.2xlarge instance and gave it a stress test. It was not affected one bit.
 
-## 5. Monitoring and Log Information
+## Monitoring and Log Information
 
 During the blitz test and subsequent remediation process, we monitored various aspects of the application. 
+
+## Diagram
 
 
 ---
