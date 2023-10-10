@@ -71,7 +71,7 @@ The issue was that the URL Shortener was not able to handle an influx of 14,000 
 
 Test- Results after redeploying:
 
-I redeployed the application which is not running on a t2.2xlarge instance and gave it a stress test. It was not affected one bit.
+I redeployed the application which is now running on a t2.2xlarge instance and gave it a stress test. It was not affected one bit.
 
 ## 5. Monitoring and Log Information
 
